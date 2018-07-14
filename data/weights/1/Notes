@@ -1,0 +1,12 @@
+Provided dataset only
+
+learning_rate = 0.05
+batch_size = 64
+num_epochs = 10
+steps_per_epoch = 200
+validation_steps = 50
+workers = 2
+
+weight:  0.7196652719665272
+Final IOU:  0.5770672489481513
+Final score:  0.415295258657247
