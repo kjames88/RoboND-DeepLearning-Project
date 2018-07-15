@@ -1,0 +1,11 @@
+learning_rate = 0.003
+batch_size = 64
+num_epochs = 100
+steps_per_epoch = 64  # 200
+validation_steps = 18 # 50
+workers = 2
+
+weight:       0.7317073170731707
+final_IOU:    0.567993247901
+final_score:  0.415604815537
+
