@@ -1,0 +1,16 @@
+Udacity training data
+learning_rate = 0.005
+batch_size = 32
+num_epochs = 25
+#steps_per_epoch = 156  # 9987//64
+#validation_steps = 39 # 2555//64
+steps_per_epoch = 129  # 4131//32
+validation_steps = 37 # 1184//32
+workers = 2
+
+loss: 0.0215 - val_loss: 0.0275
+
+weight:      0.7447045707915273
+final_IOU:   0.554546426548
+final_score: 0.412973258566
+
