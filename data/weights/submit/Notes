@@ -1,0 +1,38 @@
+Udacity training data
+
+def fcn_model(inputs, num_classes):
+    
+    # Add Encoder Blocks
+    l1 = encoder_block(inputs, 32, 2)
+    l2 = encoder_block(l1, 128, 2)
+    l2d = layers.Dropout(0.5)(l2)
+    l3 = encoder_block(l2d, 512, 2)
+    l3d = layers.Dropout(0.5)(l3)
+    
+    # Remember that with each encoder layer, the depth of your model (the number of filters) increases.
+
+    # Add 1x1 Convolution layer using conv2d_batchnorm().
+    l4 = conv2d_batchnorm(l3d, 1024, kernel_size=1, strides=1)
+    
+    # Add the same number of Decoder Blocks as the number of Encoder Blocks
+    l5 = decoder_block(l4, l2, 256)
+    l6 = decoder_block(l5, l1, 64)
+    x = decoder_block(l6, inputs, 16)
+    
+    # The function returns the output layer of your model. "x" is the final layer obtained from the last decoder_block()
+    return layers.Conv2D(num_classes, 1, activation='softmax', padding='same')(x)
+
+learning_rate = 0.001
+batch_size = 32
+num_epochs = 100
+#steps_per_epoch = 156  # 9987//64
+#validation_steps = 39 # 2555//64
+steps_per_epoch = 129  # 4131//32
+validation_steps = 37 # 1184//32
+workers = 2
+
+loss: 0.0113 - val_loss: 0.0224
+
+weight:      0.7770345596432553
+final_IOU:   0.601952698483
+final_score: 0.467738049992

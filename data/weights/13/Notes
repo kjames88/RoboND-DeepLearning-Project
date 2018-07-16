@@ -1,0 +1,15 @@
+learning_rate = 0.002
+batch_size = 32
+num_epochs = 50
+#steps_per_epoch = 156  # 9987//64
+#validation_steps = 39 # 2555//64
+steps_per_epoch = 129  # 4131//32
+validation_steps = 37 # 1184//32
+workers = 2
+
+loss: 0.0218 - val_loss: 0.0329
+
+weight:      0.7435610302351624
+final_IOU:   0.551166582462
+final_score: 0.409825991887
+
