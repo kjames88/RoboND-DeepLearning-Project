@@ -30,6 +30,8 @@ steps_per_epoch = 64  # 4131//64
 validation_steps = 18 # 1184//64
 workers = 2
 
+loss: 0.0181 - val_loss: 0.0273
+
 weight:       0.7382022471910112
 final_IOU:    0.547183957614
 final_score:  0.403932427137
