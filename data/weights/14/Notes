@@ -1,0 +1,19 @@
+My training data
+
+Same network and learning rate as submit
+
+learning_rate = 0.001
+batch_size = 32
+num_epochs = 100
+steps_per_epoch = 312  # 9987//32
+validation_steps = 79 # 2555//32
+#steps_per_epoch = 129  # 4131//32
+#validation_steps = 37 # 1184//32
+workers = 2
+
+loss: 0.0068 - val_loss: 0.1527
+
+0.7416107382550335
+0.550751213929
+0.408443014357
+
